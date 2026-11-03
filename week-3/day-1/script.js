@@ -30,7 +30,11 @@ console.log(exampleMenu[0]);         // first item: index 0
 console.log(exampleMenu.length);     // how many items
 
 // TODO: Make an array of 3 or more things YOUR truck sells.
+const truckMenu = ["Matcha Chicory Tiramisu", "Pistachio Lavender Latte ", "Banana Bread Cold Brew"];
 // TODO: Log the first item, the last item, and how many items there are.
+console.log(truckMenu[0]);                     // first item: index 0
+console.log(truckMenu[truckMenu.length - 1]); // last item
+console.log(truckMenu.length);                // how many items
 
 
 // ---------- Step 3: An object (one thing with details) ----------
@@ -40,7 +44,10 @@ console.log(exampleItem.name);       // dot notation
 console.log(exampleItem["price"]);   // bracket notation
 
 // TODO: Make an object for one of YOUR menu items (name, price, spicy).
+const specialtyItem = { name: "Matcha Chicory Tiramisu", price: 8.5, sweet: true };
 // TODO: Log one property with dot notation and one with bracket notation.
+console.log(specialtyItem.name);        // dot notation
+console.log(specialtyItem["price"]);    //bracket notation
 
 
 // ---------- Step 4: A function ----------
