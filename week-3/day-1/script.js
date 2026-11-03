@@ -59,6 +59,11 @@ console.log(addTip(10, 2));          // 12
 
 // TODO: Write a function orderTotal(price, quantity) that RETURNS price * quantity.
 // TODO: Before you run it, guess what orderTotal(4.5, 3) gives. Then log it.
+function orderTotal(price, quantity)  {
+  return price * quantity;
+}
+// Guess : 8.5 * 2 = 17
+console.log (orderTotal(8.5,2)); // 17
 
 
 // ---------- Extra practice (if you finish early) ----------

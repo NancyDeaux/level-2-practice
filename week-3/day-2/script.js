@@ -15,7 +15,14 @@ const exampleTruck = {
 console.log("Step 1:", exampleTruck.describe());   // Welcome to Taco Rocket!
 
 // TODO: Make an object for YOUR truck with a name and a describe() method that uses this.name.
+const truck = {
+  name: "Sip Happens",
+  describe: function () {
+    return "Welcome to " + this.name + "!";
+  },
+};
 // TODO: Log the result of calling describe().
+console.log("Step 1:", truck.describe());   // Welcome to Sip Happens!
 
 
 // ---------- Step 2: Compare with an arrow function ----------
@@ -29,7 +36,14 @@ const exampleArrowTruck = {
 console.log("Step 2:", exampleArrowTruck.describe());   // the name is missing!
 
 // TODO: Add an arrow-function version to YOUR truck and log it.
+const arrowTruck = {
+  name: "Sip Happens",
+  describe: () => {
+    return "Welcome to " + this.name + "!";
+  },
+};
 // TODO: Write one sentence in a comment: what went wrong with the arrow version?
+console.log("Step 2:", arrowTruck.describe());   // the name is missing!
 // (Hint: arrow functions don't get their own "this".)
 
 
