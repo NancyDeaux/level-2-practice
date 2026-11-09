@@ -4,10 +4,10 @@
 
 // TODO first: replace this menu with YOUR truck's menu (keep the same shape).
 const menu = [
-  { name: "Taco", price: 4.5 },
-  { name: "Burrito", price: 9 },
-  { name: "Nachos", price: 6.25 },
-  { name: "Churro", price: 3 },
+  {"name": "Matcha Chicory Tiramisu", "price": "$8.50"},
+  {"name": "Pistachio Lavender Latte", "price": "$6"},
+  {"name": "Banana Bread Cold Brew", "price": "$7.50"},
+  {"name": "Pandan Beignet Bites", "price": "$5.50"}
 ];
 
 
@@ -18,6 +18,10 @@ for (let i = 0; i < menu.length; i++) {
 }
 
 // TODO: Write a for loop that logs every item's PRICE.
+console.log("Logging every item's price:");
+for (let i = 0; i < menu.length; i++) {
+  console.log(menu[i].price);
+}
 
 
 // ---------- Step 2: forEach ----------
@@ -28,22 +32,33 @@ menu.forEach(function (item) {
 });
 
 // TODO: Use forEach to log a sentence for each item, like "Taco costs $4.5".
-
+menu.forEach(function (item) {
+  console.log(`${item.name} costs ${item.price}`);
+});
 
 // ---------- Step 3: Put the menu on the page ----------
 // Example: one item, made safely with createElement + textContent.
-const list = document.getElementById("menu-list");
-const exampleLi = document.createElement("li");
-exampleLi.textContent = "Example: " + menu[0].name;
-list.appendChild(exampleLi);
+// Deleted the example <li> code that was here
 
 // TODO: Use forEach to add an <li> for EVERY menu item, showing its name and price.
 // Then delete the example <li> code above.
-
+const list = document.getElementById("menu-list");
+const itemLi = document.createElement("li");
+itemLi.textContent = "Matcha Chicory Tiramisu costs $8.50";
+itemLi.textContent = "Pistachio Lavender Latte costs $6";
+itemLi.textContent = "Banana Bread Cold Brew costs $7.50";
+itemLi.textContent = "Pandan Beignet Bites costs $5.50";
+list.appendChild(itemLi);
 
 // ---------- Step 4: A loop that adds up ----------
 // TODO: Use a for loop to add up every price into a total. Log the total.
 // Hint: start with  let total = 0;  then add each price inside the loop.
+let total = 0; 
+for (let i = 0; i < menu.length; i++) {
+  total += menu [i].price;
+}
+console.log("Total price:" + total);
+
 
 
 // ---------- Extra practice (if you finish early) ----------
