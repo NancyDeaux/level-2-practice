@@ -19,21 +19,35 @@
     <!-- ========== Layout 1: stack on phones, a row on bigger screens ========== -->
     <h2 class="mt-5">Layout 1: How to order</h2>
     <!-- TODO: give the div below these classes: d-flex flex-column flex-md-row gap-3 -->
-    <div class="">
-      <div class="p-4 bg-primary text-white">1. Order</div>
-      <div class="p-4 bg-success text-white">2. Pay</div>
-      <div class="p-4 bg-warning">3. Eat</div>
+    <div class="d-flex flex-column flex-md-row gap-3">
+      <div class="p-4 bg-primary text-white">1. Choose your drink</div>
+      <div class="p-4 bg-success text-white">2. Place your order</div>
+      <div class="p-4 bg-warning">3. Enjoy your sip!</div>
     </div>
     <!-- TODO: change the three steps to fit YOUR truck. -->
 
 
     <!-- ========== Layout 2: a bar with one thing left, one thing right ========== -->
     <h2 class="mt-5">Layout 2: Top bar</h2>
-    <!-- TODO: build a bar with your truck's name on the LEFT and a button on the RIGHT,
-         both lined up in the middle (top to bottom).
-         Classes you'll need: d-flex  justify-content-between  align-items-center
-         Give it a background and padding so you can see it: bg-dark text-white p-3 -->
-
+    <div class="d-flex justify-content-between align-items-center bg-dark text-white p-3">
+      <span class="fw-bold">Sip Happens</span>
+      <a href="#" class="btn btn-warning btn-truck">Order Now</a>
+    </div>
+    
+    <style>
+    .bg-truck {
+      background-color: #c2410c; /* Fixed missing # */
+    }
+    /* Buttons: use Bootstrap's own settings, or the button goes see-through on hover */
+    .btn-truck {
+      --bs-btn-bg: #c2410c;
+      --bs-btn-border-color: #c2410c;
+      --bs-btn-color: white;
+      --bs-btn-hover-bg: #9a3412;
+      --bs-btn-hover-border-color: #9a3412;
+      --bs-btn-hover-color: white;
+    }
+    </style>
 
 
     <!-- ========== Compare ========== -->
