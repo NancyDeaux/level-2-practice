@@ -3,25 +3,27 @@
 
 // TODO first: change this to YOUR truck's menu.
 const menu = [
-  { name: "Taco", price: 4.5 },
-  { name: "Burrito", price: 9 },
-  { name: "Nachos", price: 6.25 },
+  { name: "Matcha Chicory Tiramisu", price: 8.5},
+  { name: "Pistachio Lavender Latte", price: 6 },
+  { name: "Banana Bread Cold Brew", price: 7.5 },
 ];
 
 const area = document.getElementById("card-area");
 
-
-// ---------- Example: ONE card ----------
-const card = document.createElement("div");
-card.className = "card p-3";          // Bootstrap classes, set from JavaScript
-card.textContent = menu[0].name;
-area.appendChild(card);
-
-
 // ---------- Step 1 ----------
 // TODO: Use forEach to make a card for EVERY menu item, showing its name and price.
 // Then delete the example card code above.
+const card2 = document.createElement("div");
+card2.className = "card p-3";
+card2.textContent = "Sip Happens";
+area.appendChild(card2);
 
+truckMenu.forEach(function (item) {
+  const itemCard = document.createElement("div");
+  itemCard.className = "card p-3 text-center shadow-sm";
+  itemCard.textContent = item.name + ": $" + item.price;
+  area.appendChild(itemCard);
+});
 
 // ---------- Step 2 ----------
 // TODO: Add more Bootstrap classes to each card, for example:
