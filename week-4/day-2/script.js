@@ -18,7 +18,7 @@ card2.className = "card p-3";
 card2.textContent = "Sip Happens";
 area.appendChild(card2);
 
-truckMenu.forEach(function (item) {
+menu.forEach(function (item) {
   const itemCard = document.createElement("div");
   itemCard.className = "card p-3 text-center shadow-sm";
   itemCard.textContent = item.name + ": $" + item.price;
