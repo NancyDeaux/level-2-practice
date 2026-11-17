@@ -14,7 +14,13 @@ console.log(exampleName, exampleYears, exampleIsOpen);
 console.log(typeof exampleName);     // typeof tells you the type
 
 // TODO: Make 3 variables for YOUR truck: a name, a number, and a true/false.
+const truckName = "Sip Happens";   // string (text)
+const truckYearsInBusiness = 2;    // number  
+const truckIsOpen = true;          // boolean (true or false)
+
 // TODO: console.log them, and log the typeof each one.
+console.log(truckName, truckYearsInBusiness, truckIsOpen);
+console.log(typeof truckName, typeof truckYearsInBusiness, typeof truckIsOpen);
 
 
 // ---------- Step 2: An array (a list) ----------
@@ -24,7 +30,11 @@ console.log(exampleMenu[0]);         // first item: index 0
 console.log(exampleMenu.length);     // how many items
 
 // TODO: Make an array of 3 or more things YOUR truck sells.
+const truckMenu = ["Matcha Chicory Tiramisu", "Pistachio Lavender Latte ", "Banana Bread Cold Brew"];
 // TODO: Log the first item, the last item, and how many items there are.
+console.log(truckMenu[0]);                     // first item: index 0
+console.log(truckMenu[truckMenu.length - 1]); // last item
+console.log(truckMenu.length);                // how many items
 
 
 // ---------- Step 3: An object (one thing with details) ----------
@@ -34,7 +44,10 @@ console.log(exampleItem.name);       // dot notation
 console.log(exampleItem["price"]);   // bracket notation
 
 // TODO: Make an object for one of YOUR menu items (name, price, spicy).
+const specialtyItem = { name: "Matcha Chicory Tiramisu", price: 8.5, sweet: true };
 // TODO: Log one property with dot notation and one with bracket notation.
+console.log(specialtyItem.name);        // dot notation
+console.log(specialtyItem["price"]);    //bracket notation
 
 
 // ---------- Step 4: A function ----------
@@ -46,6 +59,11 @@ console.log(addTip(10, 2));          // 12
 
 // TODO: Write a function orderTotal(price, quantity) that RETURNS price * quantity.
 // TODO: Before you run it, guess what orderTotal(4.5, 3) gives. Then log it.
+function orderTotal(price, quantity)  {
+  return price * quantity;
+}
+// Guess : 8.5 * 2 = 17
+console.log (orderTotal(8.5,2)); // 17
 
 
 // ---------- Extra practice (if you finish early) ----------

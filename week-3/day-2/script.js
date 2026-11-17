@@ -15,7 +15,14 @@ const exampleTruck = {
 console.log("Step 1:", exampleTruck.describe());   // Welcome to Taco Rocket!
 
 // TODO: Make an object for YOUR truck with a name and a describe() method that uses this.name.
+const truck = {
+  name: "Sip Happens",
+  describe: function () {
+    return "Welcome to " + this.name + "!";
+  },
+};
 // TODO: Log the result of calling describe().
+console.log("Step 1:", truck.describe());   // Welcome to Sip Happens!
 
 
 // ---------- Step 2: Compare with an arrow function ----------
@@ -29,7 +36,14 @@ const exampleArrowTruck = {
 console.log("Step 2:", exampleArrowTruck.describe());   // the name is missing!
 
 // TODO: Add an arrow-function version to YOUR truck and log it.
+const arrowTruck = {
+  name: "Sip Happens",
+  describe: () => {
+    return "Welcome to " + this.name + "!";
+  },
+};
 // TODO: Write one sentence in a comment: what went wrong with the arrow version?
+console.log("Step 2:", arrowTruck.describe());   // the name is missing!
 // (Hint: arrow functions don't get their own "this".)
 
 
@@ -43,15 +57,20 @@ console.log("Step 3 object:", exampleParsed);
 console.log("Step 3 price:", exampleParsed.price);
 
 // TODO: Write a JSON string for one of YOUR menu items. Parse it. Log one property.
-
-
+const matchaTiramisuJson = '{"name": "Matcha Chicory Tiramisu", "price": 8.5}';
+const matchaTiramisuParsed = JSON.parse(matchaTiramisuJson);
+console.log("Step 3 text:", matchaTiramisuJson);
+console.log("Step 3 object:", matchaTiramisuParsed);
+console.log("Step 3 price:", matchaTiramisuParsed.price);
+console.log(matchaTiramisuBack.price); // 8.5
 // ---------- Step 4: JavaScript → JSON text ----------
 // Example:
 const exampleBack = JSON.stringify(exampleParsed);
 console.log("Step 4:", exampleBack, typeof exampleBack);   // it's a string again
 
 // TODO: Turn your parsed menu item back into a JSON string and log it with typeof.
-
+const matchaTiramisuBack = JSON.stringify(matchaTiramisuParsed);
+console.log("Step 4:", matchaTiramisuBack, typeof matchaTiramisuBack);   // it's a string again
 
 // ---------- Extra practice (if you finish early) ----------
 // 1. Make a second truck object with its own describe() method.

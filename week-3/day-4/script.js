@@ -8,10 +8,10 @@
 
 // First: replace this menu with YOUR truck's menu (keep the same shape).
 const menu = [
-  { name: "Taco", price: 4.5 },
-  { name: "Burrito", price: 9 },
-  { name: "Nachos", price: 6.25 },
-  { name: "Churro", price: 3 },
+  {"name": "Matcha Chicory Tiramisu", "price": "$8.50"},
+  {"name": "Pistachio Lavender Latte", "price": "$6"},
+  {"name": "Banana Bread Cold Brew", "price": "$7.50"},
+  {"name": "Pandan Beignet Bites", "price": "$5.50"}
 ];
 
 
@@ -22,44 +22,33 @@ for (let i = 0; i < menu.length; i++) {
   console.log(menu[i].name);
 }
 
-// YOUR TURN: log every item's PRICE.
-// Change one thing: .name → .price
+// TODO: Write a for loop that logs every item's PRICE.
 
 
-// ---------- Step 2: A sentence for each item ----------
-// EXAMPLE: logs "Taco is on the menu", "Burrito is on the menu"...
-for (let i = 0; i < menu.length; i++) {
-  console.log(menu[i].name + " is on the menu");
-}
+// ---------- Step 2: forEach ----------
+// Same job, shorter to write. forEach hands you each item, one at a time.
+// Example:
+menu.forEach(function (item) {
+  console.log("forEach:", item.name);
+});
 
-// YOUR TURN: log "Taco costs $4.5", "Burrito costs $9"...
-// Change one thing: " is on the menu" → " costs $" + menu[i].price
+// TODO: Use forEach to log a sentence for each item, like "Taco costs $4.5".
 
 
 // ---------- Step 3: Put the menu on the page ----------
-// EXAMPLE: puts every NAME on the page, one per line. (Same as Menu Card.)
-const menuText = document.querySelector("#menu-text");
-menuText.textContent = "";
-for (let i = 0; i < menu.length; i++) {
-  menuText.textContent = menuText.textContent + menu[i].name + "\n";
-}
+// Example: one item, made safely with createElement + textContent.
+const list = document.getElementById("menu-list");
+const exampleLi = document.createElement("li");
+exampleLi.textContent = "Example: " + menu[0].name;
+list.appendChild(exampleLi);
 
-// YOUR TURN: don't copy this one. Change the example above,
-// so each line shows the name AND the price, like "Taco: $4.5".
-// Change one thing: menu[i].name → menu[i].name + ": $" + menu[i].price
+// TODO: Use forEach to add an <li> for EVERY menu item, showing its name and price.
+// Then delete the example <li> code above.
 
 
-// ---------- Step 4: Add up a total ----------
-// EXAMPLE: COUNT the items. count starts at 0 BEFORE the loop,
-// and goes up by 1 INSIDE the loop.
-let count = 0;
-for (let i = 0; i < menu.length; i++) {
-  count = count + 1;
-}
-console.log("Items:", count);
-
-// YOUR TURN: add up every PRICE into a total. Log it.
-// Change: count → total, and + 1 → + menu[i].price
+// ---------- Step 4: A loop that adds up ----------
+// TODO: Use a for loop to add up every price into a total. Log the total.
+// Hint: start with  let total = 0;  then add each price inside the loop.
 
 
 // ---------- Extra (if you finish early): only SOME items ----------
