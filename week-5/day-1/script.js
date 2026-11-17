@@ -7,13 +7,13 @@
 //   2. Copy it under YOUR TURN, or change it where the comment says.
 
 // First: put YOUR truck's city here. Get the numbers from your "Find my city" request.
-const latitude = 30.27;
-const longitude = -97.74;
+const latitude =  29.95465;
+const longitude = -90.07507;
 
 // The same address you sent in your API tool, built from the pieces.
 const url =
   "https://api.open-meteo.com/v1/forecast?latitude=" + latitude +
-  "&longitude=" + longitude + "&current=temperature_2m,wind_speed_10m";
+  "&longitude=" + longitude + "&current=temperature_2m,wind_speed_10m&temperature_unit=fahrenheit";
 
 
 // ---------- Step 1: Send the request ----------
@@ -29,13 +29,13 @@ async function getWeather() {
   console.log("Temperature:", data.current.temperature_2m);
 
   // YOUR TURN: log the wind speed. Find its name in the console's object first.
-
+console.log("Wind Speed: ", data.current.wind_speed_10m);
 
   // ---------- Step 3: Put it on the page ----------
   // EXAMPLE: the number, plus its unit (the unit lives in current_units).
   const weather = document.getElementById("weather");
   weather.textContent = "Temperature: " + data.current.temperature_2m + " " +
-    data.current_units.temperature_2m;
+    data.current_units.temperature_2m + " . Wind: " + data.current.wind_speed_10m + " " + data.current_units.wind_speed_10m;
 
   // YOUR TURN: don't copy this one. Change the example above,
   // so the page also shows the wind speed and its unit.
